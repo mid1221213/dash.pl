@@ -23,7 +23,7 @@ $ sudo apt-get install libnet-pcap-perl libnet-frame-perl libpcap-dev
 
 If somebody knows what are the prerequisites, please tell me :-)
 
-### Configuration of this project
+### Configuration of dash.pl
 
 At the beginning of the file `dash.pl` (which contains everything that is needed), there is a configuration section. This section is filled with an example that is, actually, my setup (with dummy actions). You need to adapt it to your needs.
 
@@ -35,7 +35,7 @@ my $dev = 'eth1';
 
 to match the device on which you want to listen.
 
-Then, below, you have an array containing 2 structures (hash references). Each structure contains the hardware address (a.k.a Ethernet address, MAC address) `hwaddr`, the `name` (used only for display) and the `action` to do when the button is pushed.
+Then, below in the script, you can see an array containing 2 structures (hash references). Each structure contains the hardware address (a.k.a. Ethernet address, MAC address) `hwaddr`, the `name` (used only for display) and the `action` to do when the button is pushed.
 
 The first time you only need to configure the device because you don't already know the MAC addresses.
 
