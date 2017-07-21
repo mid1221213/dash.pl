@@ -1,10 +1,10 @@
-# dash.pl - Perl implementation of Amazon Dash button detection
+# dash.pl - Perl implementation of Amazon Dash Button detection
 
-I have made a Perl port of the node.js implementation of the Amazon Dash button detector and I wanted to share it with other who may prefer, like me, to use perl.
+I have made a Perl port of the node.js implementation of the Amazon Dash Button detector and I wanted to share it with other who may prefer, like me, to use perl.
 
-The original Node.js implementation I used is available [there](https://github.com/hortinstein/node-dash-button).
+The original node.js implementation I used is available [there](https://github.com/hortinstein/node-dash-button) (GitHub).
 
-Here is a copy of the button configuration to prepare the dash buttons, fomr the link above:
+Here is a copy of the button configuration text to prepare the dash buttons, from the link above:
 
 ### First Time Dash Button Setup
 
@@ -12,7 +12,7 @@ Follow Amazon's instructions to configure your button to send messages when you 
 
 ### Installing prerequisites
 
-#### Debvian / Ubuntu
+#### Debian / Ubuntu
 
 ``` sh
 $ sudo apt-get install libnet-pcap-perl libnet-frame-perl libpcap-dev
