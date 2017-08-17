@@ -68,6 +68,8 @@ sub process_packet {
 
     foreach my $button_h (@buttons) {
 	if ($layer->src eq $button_h->{hwaddr}) {
+
+	    ### comment line below when running as a service
 	    say "$button_h->{name} detected, launching [$button_h->{action}]";
 
 	    my $newnow = time;
@@ -78,5 +80,6 @@ sub process_packet {
 	}
     }
 
+    ### comment line below when running as a service
     say 'button [' . $layer->src . '] detected!';
 }
