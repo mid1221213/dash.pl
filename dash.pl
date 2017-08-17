@@ -55,6 +55,8 @@ my $filter = '';
 pcap_compile($pcap, \$filter, $filter_str, 1, $mask);
 pcap_setfilter($pcap, $filter);
 
+my $now = 0;
+
 # infinite loop over matching packets
 pcap_loop($pcap, -1, \&process_packet, 'JAPH');
 
@@ -67,7 +69,11 @@ sub process_packet {
     foreach my $button_h (@buttons) {
 	if ($layer->src eq $button_h->{hwaddr}) {
 	    say "$button_h->{name} detected, launching [$button_h->{action}]";
-	    system($button_h->{action});
+
+	    my $newnow = time;
+	    system($button_h->{action}) if $newnow - $now > 5;
+	    $now = $newnow;
+
 	    return;
 	}
     }
