@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use feature 'say';
 
-use Net::Pcap qw/:functions/;
+use Net::Pcap;
 use Net::Frame::Layer::ETH;
 
 ############################################
