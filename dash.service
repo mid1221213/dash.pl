@@ -2,7 +2,7 @@
 Description=Dash Buttons Service
 
 [Service]
-Type=notify
+Type=simple
 ## Modify next line to reflect dash.pl's path
 ExecStart=/root/dash.pl
 StandardOutput=null

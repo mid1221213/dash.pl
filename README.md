@@ -54,3 +54,20 @@ You then just have to fill the structure above with the correct information, and
 ### Using dash.pl
 
 Well... Once you have done all steps above, that's it! Just launch again the script and enjoy!
+
+### Installing dash.pl as a systemd service
+
+After configuring dash.pl, you may want to use it as a service to be automatically started as a daemon when your computer is switched on.
+
+Edit the file `dash.service` to modify the path to the file `dash.pl`, then use the following command to edit the new service:
+
+``` sh
+$ sudo systemctl edit --force dash.service
+```
+
+In the editor opened by this command, copy / paste the content of your `dash.service` modified file. Then save the file and quit the editor. Then:
+
+``` sh
+$ sudo systemctl enable dash.service
+$ sudo systemctl start dash.service
+```
